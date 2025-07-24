@@ -32,4 +32,29 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.backgroundColor = '';
     }
   });
+
+  // Mostrar/ocultar menú de idiomas
+const languageToggle = document.getElementById('languageToggle');
+const languageDropdown = document.getElementById('languageDropdown');
+const currentFlag = document.getElementById('currentFlag');
+
+// Mostrar el dropdown al hacer clic
+languageToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  languageDropdown.classList.toggle('active');
+});
+
+// Cerrar el dropdown si se hace clic afuera
+window.addEventListener('click', () => {
+  languageDropdown.classList.remove('active');
+});
+
+// Cambiar solo la bandera al seleccionar idioma
+document.querySelectorAll('.language-dropdown button').forEach(button => {
+  button.addEventListener('click', () => {
+    const lang = button.getAttribute('data-lang');
+    currentFlag.src = `assets/flags/${lang}.png`;
+    languageDropdown.classList.remove('active');
+  });
+});
 });

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Inversor - Vigeo Urban</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/investor.css">
+    <script defer src="js/investor.js"></script>
+</head>
+
+<body>
+    <!-- HEADER IGUAL A HOME -->
+    <header class="header">
+        <div class="container header-container"
+            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <a href="index.html" style="flex: 1;">
+                <img src="assets/logo.png" alt="Vigeo Urban Logo" class="logo" />
+            </a>
+            <nav class="nav"
+                style="flex: 3; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 15px;">
+                <a href="oportunidades.html">Oportunidades</a>
+                <a href="comunidad.html">Comunidad</a>
+                <a href="Rentas.html">Rentas</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="#" id="loginBtn" title="Ingresar">👤</a>
+                <input type="text" placeholder="Buscar..." class="search-input" />
+                <div class="language-selector">
+                    <button class="language-button" id="languageToggle">
+                        <img src="assets/flags/es.png" alt="Idioma actual" id="currentFlag" />
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <button data-lang="es"><img src="assets/flags/es.png" alt="Español"> Español</button>
+                        <button data-lang="en"><img src="assets/flags/en.png" alt="English"> English</button>
+                        <button data-lang="fr"><img src="assets/flags/fr.png" alt="Français"> Français</button>
+                    </div>
+                </div>
+                <button id="darkModeToggle">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- DASHBOARD INVERSOR -->
+    <div class="dashboard-container">
+        <aside class="sidebar">
+
+            <nav class="sidebar-nav">
+                <a href="inversiones.html">Inversiones</a><br>
+                <a href="estadisticas.html">Estadísticas</a> <br>
+                <a href="billetera.html" class="active">Billetera</a><br>
+                <a href="oportunidades.html">Oportunidades</a><br>
+                <a href="micuenta.html">Mi cuenta</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="section">
+                <h2>Panel de Inversiones</h2>
+                <div class="summary-cards">
+                    <div class="card">
+                        <h3>Total Invertido</h3>
+                        <p>$12.000.000</p>
+                    </div>
+                    <div class="card">
+                        <h3>Rentabilidad Promedio</h3>
+                        <p>8.5%</p>
+                    </div>
+                    <div class="card">
+                        <h3>Inversiones Activas</h3>
+                        <p>4</p>
+                    </div>
+                    <div class="card">
+                        <h3>Duración Promedio</h3>
+                        <p>18 meses</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Gráficos de Inversión</h3>
+                <div class="charts">
+                    <canvas id="graficoRentabilidad" height="150"></canvas>
+                    <canvas id="graficoTiempos" height="150"></canvas>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Detalle de Inversiones</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Monto</th>
+                            <th>Inicio</th>
+                            <th>Estado</th>
+                            <th>Rentabilidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Edificio Nueva Era</td>
+                            <td>$4.000.000</td>
+                            <td>2024-06-01</td>
+                            <td>Activo</td>
+                            <td>7.2%</td>
+                        </tr>
+                        <tr>
+                            <td>Residencial El Prado</td>
+                            <td>$5.000.000</td>
+                            <td>2023-01-15</td>
+                            <td>Finalizado</td>
+                            <td>9.3%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    
+
+    <!-- FOOTER IGUAL A HOME -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vigeo Urban. Todos los derechos reservados.</p>
+            <a href="admin.html">Intranet / Admin</a>
+            <div class="social-links">
+                <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHAT FLOTANTE -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">💬</a>
+</body>
+
+</html>
