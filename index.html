@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vigeo Urban</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <a href="index.html" style="flex: 1;">
+        <img src="assets/logo.png" alt="Vigeo Urban Logo" class="logo" />
+      </a>
+      <nav class="nav" style="flex: 3; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 15px;">
+        <a href="quienes-somos.html">¿Quiénes somos?</a>
+        <a href="como-funciona.html">Cómo funciona</a>
+        <a href="ventajas.html">Ventajas</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="#" id="loginBtn">Ingresar</a>
+        <input type="text" placeholder="Buscar..." class="search-input" />
+         <div class="language-selector">
+          <button class="language-button" id="languageToggle">
+            <img src="assets/flags/es.png" alt="Idioma actual" id="currentFlag" />
+          </button>
+          <div class="language-dropdown" id="languageDropdown">
+            <button data-lang="es"><img src="assets/flags/es.png" alt="Español"> Español</button>
+            <button data-lang="en"><img src="assets/flags/en.png" alt="English"> English</button>
+            <button data-lang="fr"><img src="assets/flags/fr.png" alt="Français"> Français</button>
+          </div>
+        </div>
+        <button id="darkModeToggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Inversiones Inmobiliarias Inteligentes</h1>
+      <p>Accede a oportunidades únicas en renta y compraventa urbana desde cualquier lugar.</p>
+      <a href="inversor.html" class="btn">Quiero invertir</a>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="container">
+      <h2>Bienvenido a Vigeo Urban</h2>
+      <p>Conecta con una nueva forma de invertir en proyectos urbanos confiables, rentables y seguros.</p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>¿Listo para comenzar?</h2>
+      <p>Únete a la comunidad de inversión urbana con Vigeo Urban.</p>
+      <a href="renter.html" class="btn secondary">Soy Arrendador</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Vigeo Urban. Todos los derechos reservados.</p>
+      <a href="admin.html">Intranet / Admin</a>
+      <div class="social-links">
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chat flotante WhatsApp -->
+  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">💬</a>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Iniciar sesión</h2>
+      <form>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,357 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Contenedor general */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Encabezado */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 4px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  height: 80px;
+  vertical-align: middle;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #50b36b;
+}
+
+#darkModeToggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.search-input {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  max-width: 160px;
+}
+
+
+/* Hero principal */
+.hero {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.btn {
+  background-color: #50b36b;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #3e9255;
+}
+
+.btn.secondary {
+  background-color: #ffffff;
+  color: #50b36b;
+  border: 2px solid #50b36b;
+}
+
+.btn.secondary:hover {
+  background-color: #f0fff5;
+}
+
+/* Secciones informativas */
+.info-section {
+  padding: 60px 0;
+}
+
+.info-section.alt {
+  background-color: #f4f4f4;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #50b36b;
+}
+
+.info-section p,
+.info-section li,
+.info-section ol {
+  font-size: 1rem;
+  color: #444;
+}
+
+.info-section ul,
+.info-section ol {
+  padding-left: 20px;
+}
+
+/* Llamado a la acción */
+.cta-section {
+  background-color: #50b36b;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #ccc;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+
+ .language-selector {
+      position: relative;
+    }
+    .language-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .language-button img {
+      width: 24px;
+      height: 16px;
+      object-fit: contain;
+    }
+    .language-dropdown {
+      display: none;
+      position: absolute;
+      top: 120%;
+      right: 0;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      z-index: 100;
+    }
+    .language-dropdown.active {
+      display: block;
+    }
+    .language-dropdown button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .language-dropdown img {
+      width: 20px;
+      height: 14px;
+      object-fit: contain;
+    }
+
+/* -------- Modo Oscuro -------- */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .header {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+body.dark .nav a {
+  color: #e0e0e0;
+}
+
+body.dark .nav a:hover {
+  color: #50b36b;
+}
+
+body.dark .hero {
+  background-color: #1c1c1c;
+}
+
+body.dark .hero h1,
+body.dark .hero p {
+  color: #eee;
+}
+
+body.dark .info-section {
+  background-color: #181818;
+}
+
+body.dark .info-section.alt {
+  background-color: #212121;
+}
+
+body.dark .info-section h2 {
+  color: #50b36b;
+}
+
+body.dark .cta-section {
+  background-color: #2e7d5c;
+  color: #fff;
+}
+
+body.dark .footer {
+  background-color: #111;
+  color: #aaa;
+}
+
+body.dark .footer a {
+  color: #aaa;
+}
+
+
+/* Modal login */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #50b36b;
+}
+
+.modal-content form input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-content form button {
+  background-color: #50b36b;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal-content form button:hover {
+  background-color: #3e9255;
+}
+
+/* Botón flotante WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 14px 18px;
+  font-size: 24px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
