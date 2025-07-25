@@ -1,1 +1,140 @@
-BILLETRA
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billetera - Vigeo Urban</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body class="dashboard-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="../assets/logo.png" alt="Logo" />
+    </div>
+    <nav class="sidebar-nav">
+      <a href="investor.html">📊 Mis Inversiones</a>
+      <a href="billetera.html">💼 Billetera</a>
+      <a href="datos.html">👤 Datos personales</a>
+      <a href="referidos.html">🤝 Referidos</a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="dashboard-main">
+    <div class="dashboard-header">
+      <div class="user-info">
+        <h2>Hola, Alex</h2>
+        <p>Tu Billetera Digital</p>
+      </div>
+      <div class="user-avatar-wrapper">
+        <div class="user-avatar">
+          <img src="../assets/avatar.png" alt="Foto de perfil">
+        </div>
+        <button id="logoutBtn" class="logout-btn">🚪 Cerrar sesión</button>
+      </div>
+    </div>
+
+    <!-- Contenido de Billetera -->
+    <section class="cards">
+      <div class="card">
+        <h3>Saldo Disponible</h3>
+        <p>$3.200.000</p>
+      </div>
+      <div class="card">
+        <h3>Ganancias Retiradas</h3>
+        <p>$1.800.000</p>
+      </div>
+      <div class="card">
+        <h3>Última Transacción</h3>
+        <p>12/07/2025 - $500.000</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/1234567890" class="whatsapp-float" title="Chatea con nosotros">💬</a>
+
+  <script>
+    document.getElementById('logoutBtn')?.addEventListener('click', () => {
+      window.location.href = '../index.html';
+    });
+  </script>
+</body>
+</html>
+
+<style>
+     .dashboard-body {
+    display: flex;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .dashboard-header {
+  display: flex;
+  justify-content: flex-end; /* alineado a la derecha */
+  align-items: center;
+  background-color: white;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0; /* sin bordes redondeados */
+  margin-bottom: 30px;
+}
+
+.user-info {
+  text-align: right;
+  margin-right: 12px;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.user-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.user-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #50b36b;
+}
+
+
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    background-color: #50b36b;
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+  }
+
+  .sidebar-logo img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-nav a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .sidebar-nav a:hover {
+    background-color: #42955c;
+  }
+</style>

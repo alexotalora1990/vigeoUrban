@@ -57,4 +57,26 @@ document.querySelectorAll('.language-dropdown button').forEach(button => {
     languageDropdown.classList.remove('active');
   });
 });
+
+ // Datos ficticios
+  const usuarioFicticio = {
+    correo: "correo@example.com",
+    clave: "123456"
+  };
+
+  const loginForm = document.getElementById("loginForm");
+
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const correo = document.getElementById("correo").value.trim();
+    const clave = document.getElementById("clave").value.trim();
+
+    if (correo === usuarioFicticio.correo && clave === usuarioFicticio.clave) {
+      // Redirigir a la página de inversor
+      window.location.href = "investor/investor.html";
+    } else {
+      alert("Correo o contraseña incorrectos");
+    }
+  });
 });
