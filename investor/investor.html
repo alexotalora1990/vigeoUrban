@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Inversor - Vigeo Urban</title>
+    <link rel="stylesheet" href="../css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+       
+</head>
+
+<body>
+    <!-- HEADER IGUAL A HOME -->
+    <header class="header">
+        <div class="container header-container"
+            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <a href="index.html" style="flex: 1;">
+                <img src="../assets/logo.png" alt="Vigeo Urban Logo" class="logo" />
+            </a>
+            <nav class="nav"
+                style="flex: 3; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 15px;">
+                <a href="oportunidades.html">Oportunidades</a>
+                <a href="comunidad.html">Comunidad</a>
+                <a href="Rentas.html">Rentas</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="#" id="loginBtn" title="Ingresar">👤</a>
+                <input type="text" placeholder="Buscar..." class="search-input" />
+                <div class="language-selector">
+                    <button class="language-button" id="languageToggle">
+                        <img src="assets/flags/es.png" alt="Idioma actual" id="currentFlag" />
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <button data-lang="es"><img src="../assets/flags/es.png" alt="Español"> Español</button>
+                        <button data-lang="en"><img src="../assets/flags/en.png" alt="English"> English</button>
+                        <button data-lang="fr"><img src="../assets/flags/fr.png" alt="Français"> Français</button>
+                    </div>
+                </div>
+                <button id="darkModeToggle">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- DASHBOARD INVERSOR -->
+    <div class="dashboard-container">
+         <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="./investor.html"><span>📊</span> Inversiones</a> <br>
+                <a href="./estadisticas.html"><span>📈</span> Estadísticas</a><br>
+                <a href="./billetera.html"><span>💰</span> Billetera</a><br>
+                <a href="../oportunidades.html"><span>🏗</span> Oportunidades</a><br>
+                <a href="./cuenta.html"><span>⚙️</span> Mi cuenta</a><br>
+                <a href="../index.html" class="logout"><span>🚪</span> Cerrar sesión</a><br>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="section">
+                <h2>Panel de Inversiones</h2>
+                <div class="summary-cards">
+                    <div class="card">
+                        <h3>Total Invertido</h3>
+                        <p>$12.000.000</p>
+                    </div>
+                    <div class="card">
+                        <h3>Rentabilidad Promedio</h3>
+                        <p>8.5%</p>
+                    </div>
+                    <div class="card">
+                        <h3>Inversiones Activas</h3>
+                        <p>4</p>
+                    </div>
+                    <div class="card">
+                        <h3>Duración Promedio</h3>
+                        <p>18 meses</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Gráficos de Inversión</h3>
+                <div class="charts">
+                    <canvas id="graficoRentabilidad" height="150"></canvas>
+                    <canvas id="graficoTiempos" height="150"></canvas>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Detalle de Inversiones</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Proyecto</th>
+                            <th>Monto</th>
+                            <th>Inicio</th>
+                            <th>Estado</th>
+                            <th>Rentabilidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Edificio Nueva Era</td>
+                            <td>$4.000.000</td>
+                            <td>2024-06-01</td>
+                            <td>Activo</td>
+                            <td>7.2%</td>
+                        </tr>
+                        <tr>
+                            <td>Residencial El Prado</td>
+                            <td>$5.000.000</td>
+                            <td>2023-01-15</td>
+                            <td>Finalizado</td>
+                            <td>9.3%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    
+
+    <!-- FOOTER IGUAL A HOME -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vigeo Urban. Todos los derechos reservados.</p>
+            <a href="admin.html">Intranet / Admin</a>
+            <div class="social-links">
+                <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHAT FLOTANTE -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">💬</a>
+</body>
+
+</html>
+
+<style>
+    body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 120px);
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #39dd47;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-area {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-area img {
+  max-width: 100%;
+  height: 60px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: #6b6b6b;
+  margin-bottom: 45px;
+  font-weight: 700;
+}
+
+.sidebar-nav a:hover {
+  color: #50b36b;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 150px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+}
+
+.card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.account-form {
+  max-width: 400px;
+}
+
+.account-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.account-form input,
+.account-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.account-form button {
+  padding: 10px 20px;
+  background-color: #50b36b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.account-form button:hover {
+  background-color: #3a9c58;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .summary-cards {
+    flex-direction: column;
+  }
+}
+
+/* Modo oscuro */
+body.dark .sidebar {
+  background-color: #222;
+}
+
+body.dark .sidebar-nav a {
+  color: #ccc;
+}
+
+body.dark .sidebar-nav a:hover {
+  color: #78e098;
+}
+
+body.dark .main-content {
+  background-color: #1b1b1b;
+  color: #f0f0f0;
+}
+
+body.dark .card {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark .account-form input,
+body.dark .account-form select {
+  background-color: #333;
+  color: #f0f0f0;
+  border-color: #555;
+}
+
+body.dark .account-form button {
+  background-color: #78e098;
+  color: #000;
+}
+
+body.dark .account-form button:hover {
+  background-color: #50b36b;
+}
+
+</style>
+
+<script>
+    // investor.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const darkToggle = document.getElementById('darkModeToggle');
+  const languageToggle = document.getElementById('languageToggle');
+  const languageDropdown = document.getElementById('languageDropdown');
+  const flagButtons = languageDropdown?.querySelectorAll('button[data-lang]') || [];
+
+  // MODO OSCURO
+  if (localStorage.getItem('vigeo-investor-dark') === 'true') {
+    document.body.classList.add('dark');
+  }
+
+  if (darkToggle) {
+    darkToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('vigeo-investor-dark', document.body.classList.contains('dark'));
+    });
+  }
+
+  // CAMBIO DE IDIOMA - Mostrar/Ocultar Dropdown
+  if (languageToggle && languageDropdown) {
+    languageToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      languageDropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', () => {
+      languageDropdown.classList.remove('show');
+    });
+
+    flagButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        const flagImg = btn.querySelector('img').src;
+        document.getElementById('currentFlag').src = flagImg;
+        localStorage.setItem('vigeo-investor-lang', lang);
+        alert('Idioma cambiado a: ' + lang);
+      });
+    });
+  }
+
+  // FORMULARIO DE MI CUENTA
+  const accountForm = document.querySelector('.account-form');
+  if (accountForm) {
+    accountForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Cambios guardados. (Simulación)');
+    });
+  }
+
+  
+});
+
+</script>
