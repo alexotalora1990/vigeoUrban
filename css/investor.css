@@ -142,8 +142,10 @@
   border-radius: 50%;
   font-size: 24px;
   color: white;
-  z-index: 1000;
+  z-index: 9999; 
   text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .dashboard-header {
@@ -182,4 +184,88 @@
   margin: 4px 0 0;
   font-size: 14px;
   color: #777;
+}
+
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .dashboard-main,
+body.dark-mode .form-section,
+body.dark-mode .card,
+body.dark-mode .chart-section,
+body.dark-mode .investment-table-wrapper,
+body.dark-mode .referral-section {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark-mode .sidebar {
+  background-color: #2e2e2e;
+}
+
+body.dark-mode .sidebar-nav a {
+  color: #fff;
+}
+
+body.dark-mode .sidebar-nav a:hover {
+  background-color: #3a3a3a;
+}
+
+body.dark-mode .logout-btn {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+/* Menú hamburguesa para móviles */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 2000;
+  background-color: white;
+  color: rgb(14, 13, 13);
+  font-size: 24px;
+  border:2px solid #50b36b;
+  padding: 10px 14px;
+  
+  cursor: pointer;
+}
+
+.dark-mode-toggle {
+  margin-top: 30px;
+}
+
+/* Responsive para celular */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .dashboard-main {
+    padding: 20px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
