@@ -1,177 +1,185 @@
-/* investor.css */
-
-body {
+/* Estilo general del cuerpo */
+.dashboard-body {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
 }
 
-.dashboard-container {
-  display: flex;
-  flex: 1;
-  min-height: calc(100vh - 120px);
-}
-
+/* Sidebar (menú lateral) */
 .sidebar {
-  width: 220px;
-  background-color: #f4f4f4;
+  width: 240px;
+  background-color: #50b36b;
+  min-height: 100vh;
+  color: white;
   padding: 20px;
-  border-right: 1px solid #ddd;
-  display: flex;
-  flex-direction: column;
+  position: sticky;
+  top: 0;
 }
 
-.logo-area {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.logo-area img {
-  max-width: 100%;
-  height: 60px;
+.sidebar-logo img {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .sidebar-nav a {
+  display: block;
+  padding: 10px 0;
+  color: white;
   text-decoration: none;
-  color: #333;
-  margin-bottom: 15px;
-  font-weight: 500;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .sidebar-nav a:hover {
-  color: #50b36b;
+  background-color: #42955c;
 }
 
-.main-content {
+/* Encabezado superior */
+.dashboard-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: white;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.user-info {
+  text-align: right;
+  margin-right: 12px;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.user-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.user-avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #50b36b;
+}
+
+/* Botón cerrar sesión */
+.logout-btn {
+  background-color: #ffffff;
+  color: #50b36b;
+  border: 2px solid #50b36b;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #42955c;
+  color: white;
+}
+
+/* Contenido principal */
+.dashboard-main {
   flex: 1;
   padding: 30px;
-  background-color: #fff;
+  background-color: #f5f5f5;
 }
 
-.section {
-  margin-bottom: 40px;
+.dashboard-main h1 {
+  margin-bottom: 20px;
 }
 
-.summary-cards {
+/* Tarjetas (reutilizables) */
+.cards {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .card {
-  flex: 1;
-  min-width: 150px;
+  background: white;
+  border-radius: 10px;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  background-color: #f9f9f9;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .card h3 {
-  margin: 0 0 10px;
+  margin-bottom: 10px;
+  color: #50b36b;
 }
 
 .card p {
-  font-size: 1.4rem;
+  font-size: 24px;
   font-weight: bold;
 }
 
-.account-form {
-  max-width: 400px;
-}
-
-.account-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-.account-form input,
-.account-form select {
-  width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.account-form button {
-  padding: 10px 20px;
-  background-color: #50b36b;
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 24px;
   color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
+  z-index: 1000;
+  text-decoration: none;
 }
 
-.account-form button:hover {
-  background-color: #3a9c58;
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .dashboard-container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .main-content {
-    padding: 15px;
-  }
-
-  .summary-cards {
-    flex-direction: column;
-  }
+.header-title h1 {
+  margin: 0;
+  font-size: 22px;
+  color: #50b36b;
 }
 
-/* Modo oscuro */
-body.dark .sidebar {
-  background-color: #222;
+.user-info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-body.dark .sidebar-nav a {
-  color: #ccc;
+.user-info {
+  text-align: right;
 }
 
-body.dark .sidebar-nav a:hover {
-  color: #78e098;
+.user-info h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
 }
 
-body.dark .main-content {
-  background-color: #1b1b1b;
-  color: #f0f0f0;
+.user-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #777;
 }
-
-body.dark .card {
-  background-color: #2a2a2a;
-  border-color: #444;
-}
-
-body.dark .account-form input,
-body.dark .account-form select {
-  background-color: #333;
-  color: #f0f0f0;
-  border-color: #555;
-}
-
-body.dark .account-form button {
-  background-color: #78e098;
-  color: #000;
-}
-
-body.dark .account-form button:hover {
-  background-color: #50b36b;
-}
-

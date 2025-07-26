@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Inversiones - Vigeo Urban</title>
+  <link rel="stylesheet" href="../css/investor.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="../js/investor.js"></script>
+</head>
+
+<body class="dashboard-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="../assets/logo.png" alt="Logo" />
+    </div>
+    <nav class="sidebar-nav">
+      <a href="/investor/investor.html">📊 Mis Inversiones</a>
+      <a href="/investor/billetera.html">💼 Billetera</a>
+      <a href="/investor/cuenta.html">👤 Datos personales</a>
+      <a href="/investor/referidos.html">🤝 Referidos</a>
+    </nav>
+
+  </aside>
+
+  <!-- Contenido principal -->
+  <!-- Contenido principal -->
+  <main class="dashboard-main">
+    <div class="dashboard-header">
+      <div class="header-title">
+        <h1>📊 Mis Inversiones</h1>
+      </div>
+
+      <div class="user-info-wrapper">
+        <div class="user-info">
+          <h2>Hola, Alex</h2>
+          <p>Consulta tus inversiones</p>
+        </div>
+        <div class="user-avatar-wrapper">
+          <div class="user-avatar">
+            <img src="../assets/avatar.png" alt="Foto de perfil">
+          </div>
+          <button id="logoutBtn" class="logout-btn">🚪 Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Tarjetas resumen -->
+    <section class="cards">
+      <div class="card">
+        <h3>Inversiones activas</h3>
+        <p>5</p>
+      </div>
+      <div class="card">
+        <h3>Total invertido</h3>
+        <p>$12.500.000</p>
+      </div>
+      <div class="card">
+        <h3>Rentabilidad</h3>
+        <p>18.6%</p>
+      </div>
+    </section>
+
+    <!-- Gráfico -->
+    <section class="chart-section">
+      <h2>Historial de ganancias</h2>
+      <canvas id="graficoGanancias"></canvas>
+    </section>
+
+    <section class="investment-table-section">
+      <h2>Detalle de tus Inversiones</h2>
+      <div class="investment-table-wrapper">
+        <table class="investment-table">
+          <thead>
+            <tr>
+              <th>Proyecto</th>
+              <th>Fecha de inversión</th>
+              <th>Valor invertido</th>
+              <th>Rentabilidad (%)</th>
+              <th>Ganancia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UrbanGreen</td>
+              <td>01/03/2024</td>
+              <td>$5.000.000</td>
+              <td>15%</td>
+              <td>$750.000</td>
+            </tr>
+            <tr>
+              <td>EcoLoft</td>
+              <td>15/04/2024</td>
+              <td>$3.500.000</td>
+              <td>12%</td>
+              <td>$420.000</td>
+            </tr>
+            <tr>
+              <td>Altavista</td>
+              <td>20/05/2024</td>
+              <td>$4.000.000</td>
+              <td>18%</td>
+              <td>$720.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Chat WhatsApp -->
+  <a href="https://wa.me/1234567890" class="whatsapp-float" title="Chatea con nosotros">💬</a>
+
+</body>
+
+</html>
+
+
+<script>
+  // graficoInversiones.js
+  document.addEventListener('DOMContentLoaded', () => {
+    const ctx = document.getElementById('graficoGanancias')?.getContext('2d');
+
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+          datasets: [{
+            label: 'Ganancias ($)',
+            data: [300000, 420000, 500000, 610000, 720000, 850000],
+            borderColor: '#50b36b',
+            backgroundColor: 'rgba(80, 179, 107, 0.2)',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+  });
+
+</script>
+
+
+
+<style>
+  /* Tabla de inversiones (investor.html) */
+  .investment-table-section {
+    margin-top: 40px;
+  }
+
+  .investment-table-wrapper {
+    overflow-x: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .investment-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+  }
+
+  .investment-table th,
+  .investment-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .investment-table th {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+
+  .investment-table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+
+  /* Gráfico de ganancias (investor.html) */
+  .chart-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+</style>

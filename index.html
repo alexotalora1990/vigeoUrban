@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vigeo Urban</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/main.js"></script>
+  <script defer src="/js/main.js"></script>
 </head>
+
 <body>
   <header class="header">
-    <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <div class="container header-container"
+      style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
       <a href="index.html" style="flex: 1;">
         <img src="assets/logo.png" alt="Vigeo Urban Logo" class="logo" />
       </a>
-      <nav class="nav" style="flex: 3; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 15px;">
-        <a href="oportunidades.html">Oportunidades</a>
-        <a href="comunidad.html">Comunidad</a>
-        <a href="Rentas.html">Rentas</a>
-        <a href="blog.html">Blog</a>
-        <a href="contacto.html">Contacto</a>
+      <nav class="nav"
+        style="flex: 3; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 15px;">
+        <a href="#">Oportunidades</a>
+        <a href="#">Comunidad</a>
+        <a href="#">Rentas</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacto</a>
         <a href="#" id="loginBtn" title="Ingresar">👤</a>
         <input type="text" placeholder="Buscar..." class="search-input" />
-         <div class="language-selector">
+        <div class="language-selector">
           <button class="language-button" id="languageToggle">
             <img src="assets/flags/es.png" alt="Idioma actual" id="currentFlag" />
           </button>
@@ -35,7 +39,26 @@
       </nav>
     </div>
   </header>
-
+  <section class="info-section">
+    <div class="container2">
+      <h2>¡Bienvenido a Vigeo Urban!</h2>
+      <p class="txt">Conecta con una nueva forma de invertir en proyectos urbanos confiables, rentables y seguros,
+        respaldados por análisis expertos, alta transparencia y un riguroso proceso de selección..</p>
+    </div>
+    <div class="slider">
+  <div class="slides">
+    <img src="/" alt="Imagen 1">
+    <img src="/assets/crr2.png" alt="Imagen 2">
+    <img src="/assets/crr3.png" alt="Imagen 3">
+    <img src="/assets/crr4.png" alt="Imagen 4">
+    <!-- Duplicadas para efecto continuo -->
+    <img src="/assets/crr1.png" alt="Imagen 1">
+    <img src="/assets/crr2.png" alt="Imagen 2">
+    <img src="/assets/crr3.png" alt="Imagen 3">
+    <img src="/assets/crr4.png" alt="Imagen 4">
+  </div>
+</div>
+  </section>
   <section class="hero">
     <div class="imagen">
       <img src="assets/homeimg.png" alt="img" style="height: 400px;">
@@ -43,30 +66,222 @@
     <div class="container">
       <h1>Inversiones Inmobiliarias Inteligentes</h1>
       <p>Accede a oportunidades únicas en renta y compraventa urbana desde cualquier lugar.</p>
-      <a href="inversor.html" class="btn">Quiero invertir</a>
+      <a href="inversor.html" class="btn-secondary">Quiero invertir</a>
     </div>
   </section>
 
-  <section class="info-section">
-    <div class="container2">
-      <h2>¡Bienvenido a Vigeo Urban!</h2>
-      <p class="txt">Conecta con una nueva forma de invertir en proyectos urbanos confiables, rentables y seguros, respaldados por análisis expertos, alta transparencia y un riguroso proceso de selección..</p>
-    </div>
-    <div class="slider">
-    <div class="slides">
-      <img src="/assets/crr1.png" alt="Imagen 1">
-      <img src="/assets/crr2.png" alt="Imagen 2">
-      <img src="/assets/crr3.png" alt="Imagen 3">
-      <img src="/assets/crr4.png" alt="Imagen 4">
-    </div>
-  </div>
-  </section>
 
-  <section class="cta-section">
+
+
+  <section class="opportunities" id="oportunidades">
     <div class="container">
-      <h2>¿Listo para comenzar?</h2>
-      <p>Únete a la comunidad de inversión urbana con Vigeo Urban.</p>
-      <a href="renter.html" class="btn secondary">Soy Arrendador</a>
+      <div class="section-header">
+        <h2 class="section-title">Oportunidades</h2>
+        <p class="section-subtitle">Descubre las mejores inversiones inmobiliarias disponibles</p>
+      </div>
+
+      <div class="opportunities-grid">
+        <!-- Card 1 -->
+        <div class="opportunity-card">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Apartamento moderno Toronto">
+            <div class="card-badge badge-fraccion">Fracción</div>
+          </div>
+          <div class="card-content">
+            <div class="card-location">
+              <span class="location-icon">📍</span>
+              <span>Toronto, Canadá</span>
+            </div>
+            <div class="card-details">
+              <div class="detail-item">
+                <span class="detail-label">Tiempo:</span>
+                <span class="detail-value">24 meses</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Valor:</span>
+                <span class="detail-value">$185,000</span>
+              </div>
+              <div class="detail-item profit">
+                <span class="detail-label">Ganancia:</span>
+                <span class="detail-value profit-value">15%</span>
+              </div>
+            </div>
+            <button class="card-btn">Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="opportunity-card">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Casa alquilada Vancouver">
+            <div class="card-badge badge-alquilada">Alquilada</div>
+          </div>
+          <div class="card-content">
+            <div class="card-location">
+              <span class="location-icon">📍</span>
+              <span>Vancouver, Canadá</span>
+            </div>
+            <div class="card-details">
+              <div class="detail-item">
+                <span class="detail-label">Tiempo:</span>
+                <span class="detail-value">18 meses</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Valor:</span>
+                <span class="detail-value">$320,000</span>
+              </div>
+              <div class="detail-item profit">
+                <span class="detail-label">Ganancia:</span>
+                <span class="detail-value profit-value">15%</span>
+              </div>
+            </div>
+            <button class="card-btn">Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="opportunity-card">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Edificio en venta Montreal">
+            <div class="card-badge badge-venta">Venta</div>
+          </div>
+          <div class="card-content">
+            <div class="card-location">
+              <span class="location-icon">📍</span>
+              <span>Montreal, Canadá</span>
+            </div>
+            <div class="card-details">
+              <div class="detail-item">
+                <span class="detail-label">Tiempo:</span>
+                <span class="detail-value">12 meses</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Valor:</span>
+                <span class="detail-value">$450,000</span>
+              </div>
+              <div class="detail-item profit">
+                <span class="detail-label">Ganancia:</span>
+                <span class="detail-value profit-value">15%</span>
+              </div>
+            </div>
+            <button class="card-btn">Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="opportunity-card">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Apartamento fracción Calgary">
+            <div class="card-badge badge-fraccion">Fracción</div>
+          </div>
+          <div class="card-content">
+            <div class="card-location">
+              <span class="location-icon">📍</span>
+              <span>Calgary, Canadá</span>
+            </div>
+            <div class="card-details">
+              <div class="detail-item">
+                <span class="detail-label">Tiempo:</span>
+                <span class="detail-value">36 meses</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Valor:</span>
+                <span class="detail-value">$275,000</span>
+              </div>
+              <div class="detail-item profit">
+                <span class="detail-label">Ganancia:</span>
+                <span class="detail-value profit-value">15%</span>
+              </div>
+            </div>
+            <button class="card-btn">Ver detalles</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-footer">
+        <a href="#" class="btn-secondary">Ver todas las oportunidades</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="metrics">
+    <div class="container">
+      <h2>Nuestra plataforma en números</h2>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <h3>150+</h3>
+          <p>Propiedades disponibles</p>
+        </div>
+        <div class="metric-card">
+          <h3>15%</h3>
+          <p>Rendimiento promedio anual</p>
+        </div>
+        <div class="metric-card">
+          <h3>5,000+</h3>
+          <p>Inversionistas registrados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Testimonios</h2>
+        <p class="section-subtitle">Lo que dicen nuestros inversionistas</p>
+      </div>
+      <div class="testimonials-grid">
+        <!-- Testimonio 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Gracias a Vigeo Urban he podido diversificar mis inversiones de manera segura y con buenos
+              rendimientos."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos López">
+            <div class="author-info">
+              <h4>Carlos López</h4>
+              <p>Inversionista desde 2023</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonio 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"La plataforma es muy intuitiva y el equipo siempre está dispuesto a resolver dudas. ¡Excelente
+              servicio!"</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="María Rodríguez">
+            <div class="author-info">
+              <h4>María Rodríguez</h4>
+              <p>Inversionista desde 2024</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonio 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Invertir en fracciones de propiedades me ha permitido acceder a bienes raíces que antes no podía."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Jorge Martínez">
+            <div class="author-info">
+              <h4>Jorge Martínez</h4>
+              <p>Inversionista desde 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -84,18 +299,34 @@
   </footer>
 
   <!-- Chat flotante WhatsApp -->
-  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">💬</a>
+  <a href="https://wa.me/1234567890" 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="Conéctanos">💬</a>
 
   <!-- Login Modal -->
-  <div id="loginModal" class="modal hidden">
-    <div class="modal-content">
-      <h2>Iniciar sesión</h2>
-      <form>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="password" placeholder="Contraseña" required>
-        <button type="submit">Entrar</button>
-      </form>
-    </div>
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <h2>Iniciar sesión</h2>
+    <form id="loginForm">
+      <input type="email" id="correo" placeholder="Correo electrónico" value="correo@example.com" required>
+      <input type="password" id="clave" placeholder="Contraseña" value="123456" required>
+      <button type="submit" class="btn-primary">Entrar</button>
+
+      <div class="separator">o</div>
+
+      <button type="button" class="btn-google">
+        <img src="/assets/google-icon.png" alt="Google Icon"> Ingresar con Gmail
+      </button>
+
+      <div class="links">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <span> | </span>
+        <a href="#">Registrarse</a>
+      </div>
+    </form>
   </div>
+</div>
 </body>
+
 </html>
